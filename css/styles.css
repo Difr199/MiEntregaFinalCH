@@ -1,0 +1,319 @@
+/* estilo global */
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  
+  /* Barra de navegación */
+  .navbar {
+    background-color: #ff5722;
+    padding: 1em;
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  /*Formato a los enlaces en la barra de navegación*/
+  .nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px;
+    transition: color 0.3s ease;
+  }
+  .nav-list li a:hover {
+    color: #ffeb3b;
+  }
+ /*Texto centrado en el header*/
+  header h1{
+    text-align: center;
+    background-color: #ece498;
+  }
+  
+  /* Grid container para secciones */
+  .container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Cada caja del grid-container con flexbox */
+  .flex-item {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+  }
+  .flex-item:hover {
+    transform: translateY(-10px);
+    background-color: #43a047;
+  }
+  
+  /* Imágenes dentro de las cajas del grid-container*/
+  .flex-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+  }
+  .flex-item img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Grid unico para las imagenes de la galeria */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+  /* Formato para las imagenes de la galeria*/
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .gallery-item img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Formulario de contacto */
+  .contact-container {
+    padding: 20px;
+    background-color: #2196f3;
+    color: #fff;
+    margin: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .contact-form label {
+    font-weight: bold;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    transform: translateX(5px);
+    outline: none;
+  }
+  .contact-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff5722;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .contact-form button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Animación */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .container-grid > .grid-item,
+  .gallery-grid > .gallery-item,
+  .contact-container {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Pseudo-clase en enlace */
+  a:visited {
+    color: #ffffff;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Transición adicional para cajas */
+  .grid-item {
+    transition: transform 0.3s ease;
+  }
+  .grid-item:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Grid para la sección de detalles de cursos*/
+  .grid-container-article-aside {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 20px;
+  }
+
+  .grid-container-article-aside-item{
+    background-color: #b08080;
+    border: 1px solid black;
+    padding: 20px;
+  }
+  
+  /* aside como contenedor felxbox */
+  .flex-aside{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .flex-aside-item{
+    background-color: #aaa0a0;
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+    flex-grow: 1;
+    flex-basis: 225px;
+    text-align: center;
+  }
+
+  /*Transicion para las imagenes de los item del aside-flex*/
+  .flex-aside-item img{
+    transition: transform 0.3s ease;
+  }
+
+  .flex-aside-item img:hover{
+    transform: scale(1.05);
+  }
+
+  /*mining-history como contenedor flex*/
+  .mining-history{
+    display: flex;
+    /*flex-direction: column;*/
+    background-color: #c3a69d;
+    border: solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgb(17, 8, 8);
+    padding: 12px;
+  }
+
+  .mining-history-item{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    width: 100%;
+    padding: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .mining-history {
+      display: block; /* Cambia a bloque en dispositivos móviles */
+    }
+  }
+
+  
+  
+  /* Quita el subrayado en los enlaces de las cajas */
+  .grid-link {
+    text-decoration: none;
+  }
+  .grid-link:hover {
+    text-decoration: none;
+  }
+  
+  /*Estilos para algunas secciones en index */
+  .section-index {
+    display: flex;
+    flex-wrap: wrap; 
+    width: 100%;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin: 20px 0;
+    border: solid;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px black;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .section-index-item{
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin-top: 5px;
+    padding: 10px;
+  }
+
+  /*centra las imagenes en el section-index-item*/
+  .flex-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* uso de id */
+  #bienvenida{
+    border: #333 solid;
+    
+  }
+
+  #maquinas{
+    border: #e88989 solid;
+  }
+
+  #formacion{
+    border: #885de6 solid;
+  }
+
+  #certificaciones{
+    border: #6bce8e solid;
+  }
+
+  #btn-center{
+    text-align: center;
+  }
+
+  .section-index h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .section-index p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #555;
+  }
+
+  /*Formato para las imagenes en el section-index*/
+  .section-index img {
+    width: 50%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .section-index img:hover {
+    transform: scale(1.05);
+  }
+  
+  
